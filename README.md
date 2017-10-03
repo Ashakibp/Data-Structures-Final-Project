@@ -9,7 +9,7 @@ and receive them in a fashion that we can build.
 
 ## Details of this project
 
-  *	Implemented a relational database from scratch, including indexing
-  *	Database supported a subset of SQL commands including: Select, Insert, Create Index, Update, and Delete
-  *	Validated queries for data type and constraint errors
+  *	Implements a relational database from scratch, including indexing
+  *	Database supports a subset of SQL commands including: Select, Insert, Create Index, Update, and Delete
+  *	Validates queries for data type and constraint errors
   *	Built using Maven, including dependency on SQL parser
