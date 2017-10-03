@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>AaronShakib</groupId>
-  <artifactId>DataFinal2017</artifactId>
+  <groupId>DataStructuresFinalProject</groupId>
+  <artifactId>SQLProject2017</artifactId>
   <version>0.0.1</version>
   <build>
     <plugins>
@@ -19,7 +19,7 @@
   </build>
   <packaging>jar</packaging>
 
-  <name>Aaron_Shakibpanah</name>
+  <name>DSFinalProject</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -43,9 +43,9 @@
       <version>0.0.1</version>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains</groupId>
+      <groupId>com.intellij</groupId>
       <artifactId>annotations</artifactId>
-      <version>15.0</version>
+      <version>9.0.4</version>
     </dependency>
   </dependencies>
 </project>

@@ -118,8 +118,5 @@ public class Main {
         tableHolder.add(tableToAdd);
     }
 
-    public static void main(String[] args) {
-        Main x = new Main();
-    }
 
 }

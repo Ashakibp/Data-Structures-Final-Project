@@ -1,5 +1,3 @@
-import edu.yu.cs.dataStructures.fall2016.SimpleSQLParser.CreateIndexQuery;
-import edu.yu.cs.dataStructures.fall2016.SimpleSQLParser.SQLParser;
 import net.sf.jsqlparser.JSQLParserException;
 import org.junit.Before;
 import org.junit.Test;
