@@ -4,10 +4,7 @@ import org.junit.Test;
 
 
 /**
- * Disclaimer - This is not a test script.
- * Each test method runs independently, however if you run the class
- * from top to bottom, it will break. - Not because of anything regarding my project,
- * but due to my extremely weak testing strategies.
+ * Some of these test methods are not complete, and involve printing to the terminal.
  *
  * the table
  *
