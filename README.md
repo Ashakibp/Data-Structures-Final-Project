@@ -1,7 +1,4 @@
-# Data Structures Final Project 2017
-
-
-## Details of this project
+# Details of this project
 
   *	Implements a relational database from scratch, including indexing
   *	Database supports a subset of SQL commands including: Select, Insert, Create Index, Update, and Delete
