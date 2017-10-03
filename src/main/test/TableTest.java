@@ -152,8 +152,10 @@ public class TableTest {
     @Test
     public void restoreTable() throws Exception {
         SqlTable x = testMain.findTable("YCStudent");
+        int size = x.getSize();
         x.wipe(); //Deletes all
         testInsert();
+        assert x.getSize() == size;
     }
 
 

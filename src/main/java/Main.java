@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
     static ArrayList<SqlTable> tableHolder;
-    SQLParser parser;
+    private SQLParser parser;
 
     public Main() {
         parser = new SQLParser();

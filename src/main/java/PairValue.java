@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class PairValue <K, V> implements Comparable<K>{
     K key;
-    V value;
+    private V value;
 
     public PairValue(K key, V value) {
         this.key = key;
@@ -40,5 +40,6 @@ public class PairValue <K, V> implements Comparable<K>{
         }
         return 0;
     }
+
 
 }

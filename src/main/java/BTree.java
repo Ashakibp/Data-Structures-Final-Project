@@ -14,10 +14,10 @@ import edu.yu.cs.dataStructures.fall2016.SimpleSQLParser.*;
  * Created by Aaron on 4/25/17.
  */
 public class BTree<K, V> {
-    BtreeNode root;
-    int height;
-    int m;
-    K sentinalType;
+    private BtreeNode root;
+    private int height;
+    private int m;
+    private K sentinelType;
     //This is Strictly for the project
     String name;
     int n; //Amount of elements
@@ -79,18 +79,18 @@ public class BTree<K, V> {
         switch (type.toUpperCase()){
             case "INT":
                 Integer min = Integer.MIN_VALUE;
-                this.sentinalType = (K) min;
+                this.sentinelType = (K) min;
                 root.node[0] = new Entry(Integer.MIN_VALUE, null, null);
                 break;
 
             case "VARCHAR":
-                this.sentinalType = (K) " ";
+                this.sentinelType = (K) " ";
                 root.node[0] = new Entry(" ", null, null);
                 break;
 
             case "DECIMAL":
                 Double minD = Double.MIN_VALUE;
-                this.sentinalType = (K) minD;
+                this.sentinelType = (K) minD;
                 root.node[0] = new Entry(Double.MIN_VALUE, null, null);
         }
     }
@@ -98,7 +98,7 @@ public class BTree<K, V> {
     public HashSet<V> select(K key, Condition c){
         HashSet<V> list = new HashSet<>();
         if(key == null){
-            key = sentinalType;
+            key = sentinelType;
         }
         switch(c.getOperator()){
 
@@ -148,7 +148,7 @@ public class BTree<K, V> {
                         break;
                     }
                     //I mean who knows, we could be searching for a null value
-                    if (current.node[j].equals(sentinalType) && !key.equals(sentinalType)) {
+                    if (current.node[j].equals(sentinelType) && !key.equals(sentinelType)) {
                         continue;
                     } else if (current.node[j].compareTo(key) == 0) {
                         if (inclusive) {
@@ -181,7 +181,7 @@ public class BTree<K, V> {
                     break;
                 }
                 //I mean who knows, we could be searching for a null value
-                if (entry.getKey().equals(sentinalType) && !key.equals(sentinalType)) {
+                if (entry.getKey().equals(sentinelType) && !key.equals(sentinelType)) {
                     continue;
                 }
                 if (entry.compareTo(key) == 0) {
@@ -204,7 +204,7 @@ public class BTree<K, V> {
 
     public void put(K key, V value) {
         if(key == null){
-            key = sentinalType;
+            key = sentinelType;
         }
         BtreeNode x = put(this.root, key, value, this.height);
         if(x != null){
@@ -215,7 +215,7 @@ public class BTree<K, V> {
 
     public LinkedList get(K key){
         if(key == null){
-            key = sentinalType;
+            key = sentinelType;
         }
         try {
             LinkedList value = get(key, root, this.height);
@@ -270,7 +270,7 @@ public class BTree<K, V> {
 
     public void remove(K key, V value){
         if(key == null){
-            key = sentinalType;
+            key = sentinelType;
         }
         try {
             LinkedList list = get(key);
